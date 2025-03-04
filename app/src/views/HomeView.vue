@@ -1,9 +1,35 @@
+<template>
+  <div class="container">
+    <CovidDay
+      v-for="(stat)"
+      :key="monster.name"
+      :pokemon="monster"
+    />
+  </div>
+</template>
+
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import { ref, onMounted } from "vue";
+import PokemonCard from "../components/PokemonCard.vue";
+const pokemon = ref("");
+async function getPokemon() {
+  let res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0");
+  let data = await res.json();
+  pokemon.value = data.results;
+}
+onMounted(() => {
+  getPokemon();
+});
 </script>
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>
+<style scoped>
+.container {
+  width: 80vw;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+</style>
