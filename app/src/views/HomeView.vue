@@ -1,24 +1,24 @@
 <template>
   <div class="container">
     <CovidDay
-      v-for="(stat)"
-      :key="monster.name"
-      :pokemon="monster"
+      v-for="(stat) in days"
+      :key="stat.date_of_interest"
+      :stat="stat"
     />
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
-import PokemonCard from "../components/PokemonCard.vue";
-const pokemon = ref("");
-async function getPokemon() {
-  let res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0");
+import CovidDay from "../components/CovidDay.vue";
+const days = ref("");
+async function getData() {
+  let res = await fetch("https://data.cityofnewyork.us/resource/rc75-m7u3.json");
   let data = await res.json();
-  pokemon.value = data.results;
+  days.value = data;
 }
 onMounted(() => {
-  getPokemon();
+  getData();
 });
 </script>
 

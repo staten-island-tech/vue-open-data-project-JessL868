@@ -1,7 +1,7 @@
 import { onMounted } from 'vue';
 <template>
   <div>
-    <h2>{{ pokemon.name }}</h2>
+    <h2>{{ days.stat.day_of_interest }}</h2>
     <div class="abilities">
       <h5 v-for="stat in days" :key="stat">
         Case Count: {{ stat.case_count }} <br>

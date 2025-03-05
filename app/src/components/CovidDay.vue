@@ -8,17 +8,16 @@
   import { computed } from "vue";
   const props = defineProps({
     stat: Object,
-    days: Object
   });
   const covidPath = computed(() => {
-    return `https://data.cityofnewyork.us/resource/rc75-m7u3.json`;
+    return `resource/rc75-m7u3.json`;
   });
   </script>
   
   <style scoped>
   .card {
     width: 28%;
-    height: 500px;
+    height: 80px;
     background-color: aliceblue;
     margin: 30px 0;
     display: flex;
