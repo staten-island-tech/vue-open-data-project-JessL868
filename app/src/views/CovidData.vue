@@ -19,7 +19,7 @@ import { useRoute } from "vue-router";
 const route = useRoute();
 const days = ref("");
 async function getData() {
-  let res = await fetch(`https://data.cityofnewyork.us/resource/rc75-m7u3.json`);
+  let res = await fetch(`https://data.cityofnewyork.us/resource/rc75-m7u3.json?date_of_interest=${route.params.date_of_interest}`);
   let data = await res.json();
   days.value = data;
 }

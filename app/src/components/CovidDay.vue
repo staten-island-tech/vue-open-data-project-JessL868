@@ -1,6 +1,6 @@
 <template>
     <router-link :to="covidPath" class="card">
-      <h2> {{ stat.date_of_interest }}</h2>
+      <h2>  {{ stat.date_of_interest }}</h2>
     </router-link>
   </template>
   
@@ -10,7 +10,7 @@
     stat: Object,
   });
   const covidPath = computed(() => {
-    return `resource/rc75-m7u3.json`;
+    return `resource/rc75-m7u3.json?date_of_interest=${route.params.date_of_interest}`;
   });
   </script>
   
