@@ -18,7 +18,7 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue'),
     },
     {
-      path: "/covid/:id",
+      path: "/covid/:date_of_interest",
       name: "covidData",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route

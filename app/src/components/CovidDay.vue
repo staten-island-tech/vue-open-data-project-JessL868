@@ -8,9 +8,10 @@
   import { computed } from "vue";
   const props = defineProps({
     stat: Object,
+    date_of_interest: String
   });
   const covidPath = computed(() => {
-    return `resource/rc75-m7u3.json?date_of_interest=${route.params.date_of_interest}`;
+    return `/covid/${props.date_of_interest}`;
   });
   </script>
   
