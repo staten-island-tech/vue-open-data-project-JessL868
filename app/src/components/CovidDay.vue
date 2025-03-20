@@ -11,7 +11,7 @@
     date_of_interest: String
   });
   const covidPath = computed(() => {
-    return `/covid/${props.date_of_interest}`;
+    return `/covid/${props.stat.date_of_interest}`;
   });
   </script>
   

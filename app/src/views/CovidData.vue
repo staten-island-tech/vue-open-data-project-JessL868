@@ -1,8 +1,10 @@
 import { onMounted } from 'vue';
 <template>
-  <div>
-    <h2>{{ day.date_of_interest }}</h2>
-    <h5>
+  <div >
+    <h2 v-for="(stat) in day" :key="stat.date_of_interest"
+    :stat="stat">{{ day.date_of_interest }}</h2>
+    <h5 v-for="(stat) in day" :key="stat.date_of_interest"
+    :stat="stat">
       Case Count: {{ day.case_count }} <br>
       Probable Case Count: {{ day.probable_case_count }} <br>
       Hospitalized Count: {{ day.hospitalized_count }} <br>
