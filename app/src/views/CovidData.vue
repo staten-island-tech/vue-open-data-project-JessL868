@@ -2,13 +2,13 @@ import { onMounted } from 'vue';
 <template>
   <div >
     <h2 v-for="(stat) in day" :key="stat.date_of_interest"
-    :stat="stat">{{ day.date_of_interest }}</h2>
+    :stat="stat">{{ stat.date_of_interest }}</h2>
     <h5 v-for="(stat) in day" :key="stat.date_of_interest"
     :stat="stat">
-      Case Count: {{ day.case_count }} <br>
-      Probable Case Count: {{ day.probable_case_count }} <br>
-      Hospitalized Count: {{ day.hospitalized_count }} <br>
-      Death Count: {{ day.death_count }}
+      Case Count: {{ stat.case_count }} <br>
+      Probable Case Count: {{ stat.probable_case_count }} <br>
+      Hospitalized Count: {{ stat.hospitalized_count }} <br>
+      Death Count: {{ stat.death_count }}
     </h5>
   </div>
 </template>
@@ -28,4 +28,18 @@ onMounted(() => {
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-left: 20rem;
+  width: 31vw;
+
+}
+h5 {
+  font-size: 20px;
+  text-align: center;
+  margin-left: 20rem;
+
+}
+</style>

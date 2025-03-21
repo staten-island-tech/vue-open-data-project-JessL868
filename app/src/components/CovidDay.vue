@@ -26,6 +26,8 @@
     align-items: center;
     padding: 10px;
     text-transform: uppercase;
+    border-radius: 15px;
+    border-color: aliceblue;
   }
   img {
     width: 100%;
