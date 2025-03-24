@@ -17,21 +17,32 @@
   
   <style scoped>
   .card {
-    width: 28%;
-    height: 80px;
-    background-color: aliceblue;
-    margin: 30px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    text-transform: uppercase;
-    border-radius: 15px;
-    border-color: aliceblue;
-  }
-  img {
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
-  }
+  width: calc(33.33% - 3-px);
+  min-height: 100px; 
+  background-color: #e0f2f7; 
+  margin: 15px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  padding: 15px;
+  text-transform: uppercase;
+  border-radius: 10px; 
+  border: 1px solid #b2ebf2; 
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05); 
+  text-decoration: none; 
+  color: #333;
+  transition: transform 0.2s ease-in-out; 
+}
+
+.card:hover {
+  transform: scale(1.02); 
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.1); 
+  background-color: #e0ebf7; 
+}
+h2 {
+  margin: 0; 
+  font-size: 1.2rem;
+  text-align: center; 
+}
   </style>

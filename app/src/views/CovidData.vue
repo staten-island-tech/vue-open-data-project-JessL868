@@ -31,15 +31,22 @@ onMounted(() => {
 <style scoped>
 h2 {
   text-align: center;
-  font-size: 40px;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  width: 100%;
   margin-left: 20rem;
-  width: 31vw;
-
 }
+
 h5 {
-  font-size: 20px;
+  font-size: 1rem;
   text-align: center;
-  margin-left: 20rem;
-
+  margin-bottom: 10px;
+  width: 80%;
+  margin-left: 23rem;
 }
+
+h5 br {
+  margin-bottom: 5px;
+}
+
 </style>
